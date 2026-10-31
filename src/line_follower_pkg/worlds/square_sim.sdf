@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="square_track_world">
+
+    <!-- Physics & Systems -->
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- Overhead Sun -->
+    <light type="directional" name="sun">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 25 0 0 0</pose>
+      <diffuse>0.95 0.95 0.95 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0 0 -1</direction>
+    </light>
+
+    <!-- Massive White Floor -->
+    <model name="white_floor">
+      <static>true</static>
+      <link name="floor_link">
+        <collision name="floor_collision">
+          <geometry><plane><normal>0 0 1</normal><size>60 60</size></plane></geometry>
+        </collision>
+        <visual name="floor_visual">
+          <geometry><plane><normal>0 0 1</normal><size>60 60</size></plane></geometry>
+          <material>
+            <ambient>0.96 0.96 0.96 1</ambient>
+            <diffuse>0.96 0.96 0.96 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- SQUARE CIRCUIT -->
+    <model name="black_line_track">
+      <static>true</static>
+      <link name="track_link">
+        
+        <visual name="seg_0">
+          <pose>0.0000 -2.0000 0.0005 0 0 0.0000</pose>
+          <geometry><box><size>4.0200 0.10 0.001</size></box></geometry>
+          <material><ambient>0.01 0.01 0.01 1</ambient><diffuse>0.01 0.01 0.01 1</diffuse></material>
+        </visual>
+        <visual name="seg_1">
+          <pose>2.0000 0.0000 0.0005 0 0 1.5708</pose>
+          <geometry><box><size>4.0200 0.10 0.001</size></box></geometry>
+          <material><ambient>0.01 0.01 0.01 1</ambient><diffuse>0.01 0.01 0.01 1</diffuse></material>
+        </visual>
+        <visual name="seg_2">
+          <pose>0.0000 2.0000 0.0005 0 0 3.1416</pose>
+          <geometry><box><size>4.0200 0.10 0.001</size></box></geometry>
+          <material><ambient>0.01 0.01 0.01 1</ambient><diffuse>0.01 0.01 0.01 1</diffuse></material>
+        </visual>
+        <visual name="seg_3">
+          <pose>-2.0000 0.0000 0.0005 0 0 -1.5708</pose>
+          <geometry><box><size>4.0200 0.10 0.001</size></box></geometry>
+          <material><ambient>0.01 0.01 0.01 1</ambient><diffuse>0.01 0.01 0.01 1</diffuse></material>
+        </visual>
+        <visual name="junction_0">
+          <pose>-2.0000 -2.0000 0.0006 0 0 0</pose>
+          <geometry><box><size>0.10 0.10 0.0011</size></box></geometry>
+          <material><ambient>0.01 0.01 0.01 1</ambient><diffuse>0.01 0.01 0.01 1</diffuse></material>
+        </visual>
+        <visual name="junction_1">
+          <pose>2.0000 -2.0000 0.0006 0 0 0</pose>
+          <geometry><box><size>0.10 0.10 0.0011</size></box></geometry>
+          <material><ambient>0.01 0.01 0.01 1</ambient><diffuse>0.01 0.01 0.01 1</diffuse></material>
+        </visual>
+        <visual name="junction_2">
+          <pose>2.0000 2.0000 0.0006 0 0 0</pose>
+          <geometry><box><size>0.10 0.10 0.0011</size></box></geometry>
+          <material><ambient>0.01 0.01 0.01 1</ambient><diffuse>0.01 0.01 0.01 1</diffuse></material>
+        </visual>
+        <visual name="junction_3">
+          <pose>-2.0000 2.0000 0.0006 0 0 0</pose>
+          <geometry><box><size>0.10 0.10 0.0011</size></box></geometry>
+          <material><ambient>0.01 0.01 0.01 1</ambient><diffuse>0.01 0.01 0.01 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- VERIFIED RED RACING BOT -->
+    <model name="line_bot">
+      <pose>-2.0000 -2.0000 0.07 0 0 0.0000</pose>
+      <link name="base_link">
+        <inertial>
+          <mass>2.0</mass>
+          <inertia><ixx>0.0077</ixx><ixy>0</ixy><ixz>0</ixz><iyy>0.0160</iyy><iyz>0</iyz><izz>0.0216</izz></inertia>
+        </inertial>
+        
+        <!-- Red Racing Chassis -->
+        <visual name="chassis_visual">
+          <geometry><box><size>0.28 0.18 0.07</size></box></geometry>
+          <material><ambient>0.85 0.1 0.1 1</ambient><diffuse>0.85 0.1 0.1 1</diffuse></material>
+        </visual>
+        <collision name="chassis_collision">
+          <geometry><box><size>0.28 0.18 0.07</size></box></geometry>
+        </collision>
+
+        <!-- Front Caster Wheel -->
+        <visual name="caster_visual">
+          <pose>0.09 0 -0.035 0 0 0</pose>
+          <geometry><sphere><radius>0.025</radius></sphere></geometry>
+          <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material>
+        </visual>
+        <collision name="caster_collision">
+          <pose>0.09 0 -0.035 0 0 0</pose>
+          <geometry><sphere><radius>0.025</radius></sphere></geometry>
+          <surface><friction><ode><mu>0.001</mu><mu2>0.001</mu2></ode></friction></surface>
+        </collision>
+
+        <!-- Clearly Visible Camera Mast Housing -->
+        <visual name="camera_mast_visual">
+          <pose>0.12 0 0.055 0 0.5 0</pose>
+          <geometry><box><size>0.04 0.06 0.035</size></box></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+        </visual>
+
+        <!-- Camera Sensor -->
+        <sensor name="line_camera" type="camera">
+          <pose>0.12 0 0.055 0 0.5 0</pose>
+          <always_on>true</always_on>
+          <update_rate>30</update_rate>
+          <topic>/camera/image_raw</topic>
+          <camera>
+            <horizontal_fov>1.40</horizontal_fov>
+            <image><width>640</width><height>480</height><format>R8G8B8</format></image>
+            <clip><near>0.05</near><far>10.0</far></clip>
+          </camera>
+        </sensor>
+      </link>
+
+      <!-- Left Wheel -->
+      <link name="left_wheel">
+        <pose>-0.07 0.11 -0.02 -1.5708 0 0</pose>
+        <inertial><mass>0.3</mass><inertia><ixx>0.0002</ixx><ixy>0</ixy><ixz>0</ixz><iyy>0.0002</iyy><iyz>0</iyz><izz>0.0004</izz></inertia></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.05</radius><length>0.035</length></cylinder></geometry><material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.05</radius><length>0.035</length></cylinder></geometry></collision>
+      </link>
+      <joint name="left_wheel_joint" type="revolute">
+        <parent>base_link</parent><child>left_wheel</child><axis><xyz>0 0 1</xyz></axis>
+      </joint>
+
+      <!-- Right Wheel -->
+      <link name="right_wheel">
+        <pose>-0.07 -0.11 -0.02 -1.5708 0 0</pose>
+        <inertial><mass>0.3</mass><inertia><ixx>0.0002</ixx><ixy>0</ixy><ixz>0</ixz><iyy>0.0002</iyy><iyz>0</iyz><izz>0.0004</izz></inertia></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.05</radius><length>0.035</length></cylinder></geometry><material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.05</radius><length>0.035</length></cylinder></geometry></collision>
+      </link>
+      <joint name="right_wheel_joint" type="revolute">
+        <parent>base_link</parent><child>right_wheel</child><axis><xyz>0 0 1</xyz></axis>
+      </joint>
+
+      <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+        <left_joint>left_wheel_joint</left_joint>
+        <right_joint>right_wheel_joint</right_joint>
+        <wheel_separation>0.22</wheel_separation>
+        <wheel_radius>0.05</wheel_radius>
+        <topic>/cmd_vel</topic>
+      </plugin>
+    </model>
+
+  </world>
+</sdf>

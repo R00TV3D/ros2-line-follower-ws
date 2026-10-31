@@ -1,0 +1,34 @@
+[1.280s] Invoking command in '/home/rugved-raut/ros2_ws/build/line_follower_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rugved-raut/ros2_ws/build/line_follower_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rugved-raut/ros2_ws/install/line_follower_pkg/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rugved-raut/ros2_ws/build/line_follower_pkg/build --no-deps symlink_data
+[1.485s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.485s]   warnings.warn(msg)
+[1.640s] running develop
+[1.822s] running egg_info
+[1.841s] creating line_follower_pkg.egg-info
+[1.841s] writing line_follower_pkg.egg-info/PKG-INFO
+[1.842s] writing dependency_links to line_follower_pkg.egg-info/dependency_links.txt
+[1.842s] writing entry points to line_follower_pkg.egg-info/entry_points.txt
+[1.842s] writing requirements to line_follower_pkg.egg-info/requires.txt
+[1.842s] writing top-level names to line_follower_pkg.egg-info/top_level.txt
+[1.843s] writing manifest file 'line_follower_pkg.egg-info/SOURCES.txt'
+[1.882s] reading manifest file 'line_follower_pkg.egg-info/SOURCES.txt'
+[1.883s] writing manifest file 'line_follower_pkg.egg-info/SOURCES.txt'
+[1.903s] running build_ext
+[1.903s] Creating /home/rugved-raut/ros2_ws/install/line_follower_pkg/lib/python3.14/site-packages/line-follower-pkg.egg-link (link to .)
+[1.904s] Installing camera_publisher script to /home/rugved-raut/ros2_ws/install/line_follower_pkg/lib/line_follower_pkg
+[1.904s] Installing line_follower_controller script to /home/rugved-raut/ros2_ws/install/line_follower_pkg/lib/line_follower_pkg
+[1.905s] Installing virtual_sensor_node script to /home/rugved-raut/ros2_ws/install/line_follower_pkg/lib/line_follower_pkg
+[1.905s] 
+[1.905s] Installed /home/rugved-raut/ros2_ws/build/line_follower_pkg
+[1.905s] running symlink_data
+[1.905s] creating /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/ament_index/resource_index/packages
+[1.905s] symbolically linking /home/rugved-raut/ros2_ws/build/line_follower_pkg/resource/line_follower_pkg -> /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/ament_index/resource_index/packages
+[1.905s] symbolically linking /home/rugved-raut/ros2_ws/build/line_follower_pkg/package.xml -> /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg
+[1.905s] creating /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg/launch
+[1.905s] symbolically linking /home/rugved-raut/ros2_ws/build/line_follower_pkg/launch/sim.launch.py -> /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg/launch
+[1.905s] creating /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg/urdf
+[1.905s] symbolically linking /home/rugved-raut/ros2_ws/build/line_follower_pkg/urdf/dummy_bot.sdf -> /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg/urdf
+[1.906s] creating /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg/worlds
+[1.906s] symbolically linking /home/rugved-raut/ros2_ws/build/line_follower_pkg/worlds/final_grading.sdf -> /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg/worlds
+[1.906s] symbolically linking /home/rugved-raut/ros2_ws/build/line_follower_pkg/worlds/full_sim.sdf -> /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg/worlds
+[1.906s] symbolically linking /home/rugved-raut/ros2_ws/build/line_follower_pkg/worlds/square_sim.sdf -> /home/rugved-raut/ros2_ws/install/line_follower_pkg/share/line_follower_pkg/worlds
+[1.954s] Invoked command in '/home/rugved-raut/ros2_ws/build/line_follower_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rugved-raut/ros2_ws/build/line_follower_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rugved-raut/ros2_ws/install/line_follower_pkg/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rugved-raut/ros2_ws/build/line_follower_pkg/build --no-deps symlink_data

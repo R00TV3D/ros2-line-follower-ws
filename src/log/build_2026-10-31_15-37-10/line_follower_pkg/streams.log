@@ -1,0 +1,34 @@
+[1.582s] Invoking command in '/home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/build --no-deps symlink_data
+[1.821s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.821s]   warnings.warn(msg)
+[1.989s] running develop
+[2.187s] running egg_info
+[2.209s] creating line_follower_pkg.egg-info
+[2.209s] writing line_follower_pkg.egg-info/PKG-INFO
+[2.209s] writing dependency_links to line_follower_pkg.egg-info/dependency_links.txt
+[2.210s] writing entry points to line_follower_pkg.egg-info/entry_points.txt
+[2.210s] writing requirements to line_follower_pkg.egg-info/requires.txt
+[2.210s] writing top-level names to line_follower_pkg.egg-info/top_level.txt
+[2.210s] writing manifest file 'line_follower_pkg.egg-info/SOURCES.txt'
+[2.258s] reading manifest file 'line_follower_pkg.egg-info/SOURCES.txt'
+[2.260s] writing manifest file 'line_follower_pkg.egg-info/SOURCES.txt'
+[2.282s] running build_ext
+[2.282s] Creating /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/lib/python3.14/site-packages/line-follower-pkg.egg-link (link to .)
+[2.283s] Installing camera_publisher script to /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/lib/line_follower_pkg
+[2.284s] Installing line_follower_controller script to /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/lib/line_follower_pkg
+[2.284s] Installing virtual_sensor_node script to /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/lib/line_follower_pkg
+[2.284s] 
+[2.284s] Installed /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg
+[2.284s] running symlink_data
+[2.284s] creating /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/ament_index/resource_index/packages
+[2.285s] symbolically linking /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/resource/line_follower_pkg -> /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/ament_index/resource_index/packages
+[2.285s] symbolically linking /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/package.xml -> /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg
+[2.285s] creating /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg/launch
+[2.285s] symbolically linking /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/launch/sim.launch.py -> /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg/launch
+[2.285s] creating /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg/urdf
+[2.285s] symbolically linking /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/urdf/dummy_bot.sdf -> /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg/urdf
+[2.285s] creating /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg/worlds
+[2.285s] symbolically linking /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/worlds/final_grading.sdf -> /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg/worlds
+[2.286s] symbolically linking /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/worlds/full_sim.sdf -> /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg/worlds
+[2.286s] symbolically linking /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/worlds/square_sim.sdf -> /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/share/line_follower_pkg/worlds
+[2.337s] Invoked command in '/home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/install/line_follower_pkg/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rugved-raut/Desktop/Rugved IIT BBS/ros2_ws/src/build/line_follower_pkg/build --no-deps symlink_data

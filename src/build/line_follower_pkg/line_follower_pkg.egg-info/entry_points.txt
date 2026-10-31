@@ -1,0 +1,4 @@
+[console_scripts]
+camera_publisher = line_follower_pkg.camera_publisher:main
+line_follower_controller = line_follower_pkg.line_follower_controller:main
+virtual_sensor_node = line_follower_pkg.virtual_sensor_node:main
